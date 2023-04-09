@@ -30,6 +30,11 @@ export default defineType({
             type: 'string',
         }),
         defineField({
+            name: 'bio',
+            title: 'Bio',
+            type: 'text',
+        }),
+        defineField({
             title: 'Email',
             name: 'email',
             type: 'email',
@@ -58,9 +63,43 @@ export default defineType({
             type: 'string',
         }),
         defineField({
-            name: 'bio',
-            title: 'Bio',
-            type: 'text',
+            title: 'Linkedin Profile',
+            name: 'linkedin',
+            type: 'url',
+            validation: (Rule) =>
+                Rule.uri({
+                    scheme: ['http', 'https'],
+                }),
+        }),
+        defineField({
+            title: 'Linkedin Username',
+            name: 'linkedin_user',
+            type: 'string',
+        }),
+        defineField({
+            title: 'Resume',
+            name: 'resume',
+            type: 'file',
+            options: {
+                accept: `.pdf`,
+            },
+            fields: [
+                {
+                    title: 'Date',
+                    name: 'date',
+                    type: 'date'
+                },
+                {
+                    name: 'description',
+                    type: 'string',
+                    title: 'Description'
+                },
+                {
+                    name: 'allow_downloads',
+                    type: 'boolean',
+                    title: 'Allow Downloads',
+                }
+            ]
         }),
         defineField({
             name: 'hobbies',
