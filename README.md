@@ -4,8 +4,8 @@ Code for Sanity.io CMS for my developer portfolio content. The Sanity Studio pro
 
 This CMS powers these projects:
 
-- [Prework About Me](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Materialize Portfolio](https://slack.sanity.io/?utm_source=readme)
+- [Prework About Me](https://prework-about-me.netlify.app/)
+- [Materialize Portfolio](https://rldev-html-portfolio.netlify.app/)
 
 ## Technologies
 - TypeScript
