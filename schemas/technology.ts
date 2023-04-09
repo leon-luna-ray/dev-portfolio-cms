@@ -1,15 +1,10 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-    name: 'project',
-    title: 'Projects',
+    name: 'technology',
+    title: 'Technologies',
     type: 'document',
     fields: [
-        defineField({
-            title: 'Featured',
-            name: 'featured',
-            type: 'boolean',
-        }),
         defineField({
             name: 'title',
             title: 'Title',
@@ -25,31 +20,13 @@ export default defineType({
             },
         }),
         defineField({
-            title: 'Project URL',
-            name: 'url',
-            type: 'url',
-            validation: (Rule) =>
-                Rule.uri({
-                    scheme: ['http', 'https'],
-                }),
-        }),
-        defineField({
-            title: 'Reposoitory URL',
-            name: 'repository',
-            type: 'url',
-            validation: (Rule) =>
-                Rule.uri({
-                    scheme: ['http', 'https'],
-                }),
-        }),
-        defineField({
             name: 'description',
             title: 'Description',
             type: 'blockContent',
         }),
         defineField({
-            name: 'mainImage',
-            title: 'Main image',
+            name: 'image',
+            title: 'Image',
             type: 'image',
 
             options: {
@@ -58,10 +35,13 @@ export default defineType({
             },
         }),
         defineField({
-            name: 'technologies',
-            title: 'Technologies',
-            type: 'array',
-            of: [{ type: 'reference', to: { type: 'technology' } }],
+            title: 'URL',
+            name: 'url',
+            type: 'url',
+            validation: (Rule) =>
+                Rule.uri({
+                    scheme: ['http', 'https'],
+                }),
         }),
         defineField({
             name: 'tags',
@@ -73,7 +53,7 @@ export default defineType({
     preview: {
         select: {
             title: 'title',
-            media: 'mainImage',
+            media: 'image',
         },
     },
 })

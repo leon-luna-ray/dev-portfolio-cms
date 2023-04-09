@@ -4,6 +4,7 @@ import project from './project'
 import profileDetails from './profileDetails'
 import skillsList from './skillsList'
 import tag from './tag'
+import technology from './technology'
 
 export const schemaTypes = [
     blockContent,
@@ -12,4 +13,5 @@ export const schemaTypes = [
     profileDetails,
     skillsList,
     tag,
+    technology,
 ]

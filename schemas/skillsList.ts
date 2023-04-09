@@ -14,7 +14,7 @@ export default defineType({
             name: 'skills',
             title: 'Skills List',
             type: 'array',
-            of: [{ type: 'reference', to: { type: 'tag' } }],
+            of: [{ type: 'reference', to: { type: 'technology' } }],
         }),
     ],
     preview: {
