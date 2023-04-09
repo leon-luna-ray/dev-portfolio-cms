@@ -1,9 +1,20 @@
-# Sanity Clean Content Studio
+# Developer Portfolio Sanity Studio CMS
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+Code for Sanity.io CMS for my developer portfolio content. The Sanity Studio provides content to my developer portfolio projects via API and the GROQ query languge.
 
-Now you can do the following things:
+This CMS powers these projects:
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- [Prework About Me](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
+- [Materialize Portfolio](https://slack.sanity.io/?utm_source=readme)
+
+## Technologies
+- TypeScript
+- JavaScript
+- Sanity
+- GROQ
+- Yarn
+
+## Studio Desk
+![Screenshot](./static/sanity-studio.png)
+
+
