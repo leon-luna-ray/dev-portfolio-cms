@@ -11,6 +11,16 @@ export default defineType({
             type: 'string',
         }),
         defineField({
+            name: 'title',
+            title: 'Job Title',
+            type: 'string',
+        }),
+        defineField({
+            name: 'location',
+            title: 'Location',
+            type: 'string',
+        }),
+        defineField({
             name: 'image',
             title: 'Image',
             type: 'image',
@@ -18,16 +28,6 @@ export default defineType({
             options: {
                 hotspot: true,
             },
-        }),
-        defineField({
-            name: 'title',
-            title: 'Title',
-            type: 'string',
-        }),
-        defineField({
-            name: 'location',
-            title: 'Location',
-            type: 'string',
         }),
         defineField({
             name: 'bio',
