@@ -20,9 +20,13 @@ export default defineType({
             },
         }),
         defineField({
-            name: 'description',
-            title: 'Description',
-            type: 'blockContent',
+            title: 'Website',
+            name: 'website',
+            type: 'url',
+            validation: (Rule) =>
+                Rule.uri({
+                    scheme: ['http', 'https'],
+                }),
         }),
         defineField({
             name: 'image',
@@ -35,13 +39,9 @@ export default defineType({
             },
         }),
         defineField({
-            title: 'URL',
-            name: 'url',
-            type: 'url',
-            validation: (Rule) =>
-                Rule.uri({
-                    scheme: ['http', 'https'],
-                }),
+            name: 'description',
+            title: 'Description',
+            type: 'blockContent',
         }),
         defineField({
             name: 'tags',
