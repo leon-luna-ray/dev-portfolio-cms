@@ -49,6 +49,11 @@ export default defineType({
                 }),
         }),
         defineField({
+            name: 'website_name',
+            title: 'Website Name',
+            type: 'string',
+        }),
+        defineField({
             title: 'Github Profile',
             name: 'github',
             type: 'url',
