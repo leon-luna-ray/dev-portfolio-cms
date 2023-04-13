@@ -11,6 +11,23 @@ export default defineType({
             type: 'boolean',
         }),
         defineField({
+            title: 'Status',
+            name: 'status',
+            type: 'string',
+            options: {
+                list: [
+                    'live',
+                    'bug',
+                    'down',
+                    'n/a',
+                    'development',
+                    'refactor',
+                    'maintenance',
+                ],
+            }
+
+        }),
+        defineField({
             name: 'title',
             title: 'Title',
             type: 'string',
