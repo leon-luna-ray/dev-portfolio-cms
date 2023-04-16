@@ -4,10 +4,11 @@ Code for Sanity.io CMS for my developer portfolio content. The Sanity Studio pro
 
 This CMS powers these projects:
 
-- [Prework Portfolio](https://prework-portfolio-rldev.netlify.app/)
+- [Next.js Portfolio](https://nextjs-portfolio-rldev.vercel.app/)
+- [React Portfolio](https://react-portfolio-rldev.netlify.app/)
 - [Bootstrap Portfolio](https://bootstrap-portfolio-rldev.netlify.app/)
 - [Materialize Portfolio](https://materialize-portfolio-rldev.netlify.app/)
-- [React Portfolio](https://react-portfolio-rldev.netlify.app/)
+- [Prework Portfolio](https://prework-portfolio-rldev.netlify.app/)
 
 ## Technologies
 - TypeScript
