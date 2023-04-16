@@ -12,10 +12,8 @@ This CMS powers these projects:
 
 ## Technologies
 - TypeScript
-- JavaScript
-- Sanity
+- Sanity.io
 - GROQ
-- Yarn
 
 ## Studio Desk
 ![Screenshot](./static/sanity-studio.png)
