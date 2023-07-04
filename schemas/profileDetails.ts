@@ -16,6 +16,11 @@ export default defineType({
             type: 'string',
         }),
         defineField({
+            name: 'tagline',
+            title: 'Tagline',
+            type: 'string',
+        }),
+        defineField({
             name: 'location',
             title: 'Location',
             type: 'string',
@@ -28,6 +33,17 @@ export default defineType({
             options: {
                 hotspot: true,
             },
+        }),
+        defineField({
+            name: 'nickname',
+            title: 'Nickname',
+            type: 'string',
+        }),
+        defineField({
+            name: 'greeting',
+            title: 'Greeting',
+            type: 'text',
+            validation: Rule => Rule.max(256).warning('Limit 256 characters.'),
         }),
         defineField({
             name: 'bio',
