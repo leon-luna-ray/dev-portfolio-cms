@@ -20,6 +20,12 @@ export default defineType({
             title: 'Intro',
             type: 'text',
         }),
+        defineField({
+            name: 'decorationImages',
+            title: 'Decoration Images',
+            type: 'array',
+            of: [{ type: 'image' }],
+        }),
     ],
     preview: {
         select: {
