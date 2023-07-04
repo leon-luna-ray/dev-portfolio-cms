@@ -39,11 +39,21 @@ export default defineType({
             options: {
                 source: 'title',
                 maxLength: 96,
+                isUnique: () => true,
             },
         }),
         defineField({
             title: 'Project URL',
             name: 'url',
+            type: 'url',
+            validation: (Rule) =>
+                Rule.uri({
+                    scheme: ['http', 'https'],
+                }),
+        }),
+        defineField({
+            title: 'Custom URL',
+            name: 'customUrl',
             type: 'url',
             validation: (Rule) =>
                 Rule.uri({
@@ -58,6 +68,12 @@ export default defineType({
                 Rule.uri({
                     scheme: ['http', 'https'],
                 }),
+        }),
+        defineField({
+            name: 'intro',
+            title: 'Intro',
+            type: 'text',
+            validation: Rule => Rule.max(256).warning('Limit 256 characters.'),
         }),
         defineField({
             name: 'description',
