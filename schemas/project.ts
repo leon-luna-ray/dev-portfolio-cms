@@ -70,6 +70,11 @@ export default defineType({
                 }),
         }),
         defineField({
+            name: 'repositorySlug',
+            title: 'Repository Slug',
+            type: 'string',
+        }),
+        defineField({
             name: 'intro',
             title: 'Intro',
             type: 'text',
@@ -89,6 +94,12 @@ export default defineType({
                 hotspot: true,
                 metadata: ['blurhash', 'lqip', 'palette', 'exif', 'location'],
             },
+        }),
+        defineField({
+            name: 'relatedProjects',
+            title: 'Related Projects',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'project' } }],
         }),
         defineField({
             name: 'technologies',
