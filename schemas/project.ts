@@ -96,6 +96,15 @@ export default defineType({
             },
         }),
         defineField({
+            name: 'galleryImages',
+            title: 'Gallery Images',
+            type: 'array',
+            of: [{ type: 'image' }],
+            options: {
+                layout: 'grid',
+            },
+        }),
+        defineField({
             name: 'relatedProjects',
             title: 'Related Projects',
             type: 'array',
