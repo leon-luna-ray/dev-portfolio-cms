@@ -70,13 +70,13 @@ export default defineType({
                 }),
         }),
         defineField({
-            name: 'repositorySlug',
-            title: 'Repository Slug',
+            name: 'repositoryUsername',
+            title: 'Repository Username',
             type: 'string',
         }),
         defineField({
-            name: 'repositoryUsername',
-            title: 'Repository Username',
+            name: 'repositorySlug',
+            title: 'Repository Slug',
             type: 'string',
         }),
         defineField({
