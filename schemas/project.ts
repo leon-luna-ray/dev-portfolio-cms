@@ -75,6 +75,11 @@ export default defineType({
             type: 'string',
         }),
         defineField({
+            name: 'repositoryUsername',
+            title: 'Repository Username',
+            type: 'string',
+        }),
+        defineField({
             name: 'intro',
             title: 'Intro',
             type: 'text',
