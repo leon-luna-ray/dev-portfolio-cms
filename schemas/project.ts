@@ -116,6 +116,12 @@ export default defineType({
             of: [{ type: 'reference', to: { type: 'project' } }],
         }),
         defineField({
+            name: 'relatedOrganizations',
+            title: 'Related Organizations',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'organization' } }],
+        }),
+        defineField({
             name: 'technologies',
             title: 'Technologies',
             type: 'array',
