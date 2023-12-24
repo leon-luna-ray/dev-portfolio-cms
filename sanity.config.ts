@@ -8,8 +8,8 @@ export default defineConfig({
   name: 'default',
   title: 'dev-cms',
 
-  projectId: process.env.SANITY_STUDIO_PORJECT_ID,
-  dataset: process.env.SANITY_STUDIO_DATASET,
+  projectId: 'bepi633k',
+  dataset: 'production',
 
   plugins: [
     deskTool(
