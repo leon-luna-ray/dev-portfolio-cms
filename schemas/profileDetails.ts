@@ -33,6 +33,16 @@ export default defineType({
             options: {
                 hotspot: true,
             },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt text',
+                    type: 'string',
+                    options: {
+                        isHighlighted: true,
+                    },
+                },
+            ],
         }),
         defineField({
             name: 'nickname',
