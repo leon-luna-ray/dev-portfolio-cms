@@ -26,10 +26,10 @@ export default defineConfig({
                 .child(S.document().schemaType('profileDetails').documentId('profileDetails')),
               ...S.documentTypeListItems().filter(item => !['globalSettings', 'profileDetails', 'homePage', 'projectsPage',].includes(item.getId())), // Exclude 'homePage' from the main content section
               S.listItem()
-                .title('Pages')
+                .title('Landing Pages')
                 .child(
                   S.list()
-                    .title('Pages')
+                    .title('Landing Pages')
                     .items([
                       S.listItem()
                         .title('Home')
