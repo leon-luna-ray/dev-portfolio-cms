@@ -22,6 +22,11 @@ export default defineType({
       type: 'text',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+        name: 'intro',
+        title: 'Intro',
+        type: 'blockContent',
+      }),
   ],
   preview: {
     select: {
