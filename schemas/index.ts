@@ -8,6 +8,8 @@ import skillsList from './skillsList'
 import tag from './tag'
 import technology from './technology'
 import organization from './organizations'
+import homePage from './pages/homePage'
+import projectsPage from './pages/projectsPage'
 
 export const schemaTypes = [
     blogPost,
@@ -20,4 +22,6 @@ export const schemaTypes = [
     skillsList,
     tag,
     technology,
+    homePage,
+    projectsPage,
 ]

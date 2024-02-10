@@ -24,7 +24,25 @@ export default defineConfig({
               S.listItem()
                 .title('Profile')
                 .child(S.document().schemaType('profileDetails').documentId('profileDetails')),
-              ...S.documentTypeListItems().filter(item => !['globalSettings', 'profileDetails'].includes(item.getId())),
+              ...S.documentTypeListItems().filter(item => !['globalSettings', 'profileDetails', 'homePage', 'projectsPage',].includes(item.getId())), // Exclude 'homePage' from the main content section
+              S.listItem()
+                .title('Pages')
+                .child(
+                  S.list()
+                    .title('Pages')
+                    .items([
+                      S.listItem()
+                        .title('Home')
+                        .child(
+                          S.document().schemaType('homePage').documentId('homePage').title('Home')
+                        ),
+                      S.listItem()
+                        .title('Projects')
+                        .child(
+                          S.document().schemaType('projectsPage').documentId('projectsPage').title('Projects')
+                        ),
+                    ])
+                ),
             ]),
       }
     ),
