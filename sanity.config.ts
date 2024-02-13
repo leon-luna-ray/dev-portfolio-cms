@@ -3,6 +3,17 @@ import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
 import { media } from 'sanity-plugin-media';
 import { schemaTypes } from './schemas';
+import {
+  HomeIcon,
+  UsersIcon,
+  DocumentIcon,
+  DocumentsIcon,
+  EarthGlobeIcon,
+  DocumentTextIcon,
+  ClipboardImageIcon,
+  SchemaIcon,
+  TagsIcon,
+} from '@sanity/icons'
 
 export default defineConfig({
   name: 'default',
@@ -17,12 +28,15 @@ export default defineConfig({
           .items([
             S.listItem()
               .title('Global')
+              .icon(EarthGlobeIcon)
               .child(S.document().schemaType('globalSettings').documentId('globalSettings')),
             S.listItem()
               .title('Profile')
+              .icon(DocumentTextIcon)
               .child(S.document().schemaType('profileDetails').documentId('profileDetails')),
             S.listItem()
               .title('Pages')
+              .icon(DocumentsIcon)
               .child(
                 S.list()
                   .title('Pages')
@@ -31,7 +45,7 @@ export default defineConfig({
                     S.documentTypeListItem('landingPage').title('Landing Pages'),
                   ])
               ),
-            ...S.documentTypeListItems().filter(item => !['globalSettings', 'profileDetails', 'homePage', 'projectsPage'].includes(item.getId())),
+            ...S.documentTypeListItems().filter(item => !['globalSettings', 'profileDetails', 'homePage', 'landingPage'].includes(item.getId())),
 
           ]),
     }),
