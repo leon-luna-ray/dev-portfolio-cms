@@ -67,6 +67,33 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'introSection',
+      title: 'Intro Section',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Section Title',
+          type: 'string',
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Section Subtitle',
+          type: 'string',
+        }),
+        defineField({
+          name: 'intro',
+          title: 'Section Intro',
+          type: 'text',
+        }),
+        defineField({
+          name: 'body',
+          title: 'Section Body',
+          type: 'blockContent',
+        }),
+      ],
+    }),
+    defineField({
       name: 'aboutSection',
       title: 'About Section',
       type: 'object',
