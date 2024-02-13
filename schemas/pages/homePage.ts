@@ -11,16 +11,18 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'string',
+      name: 'project',
+      title: 'Project',
+      type: 'reference',
+      to: [{ type: 'project' }],
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'description',
+        source: 'title',
         maxLength: 96,
         isUnique: () => true,
       },
@@ -108,8 +110,17 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'description',
-      media: 'seoImage',
+      title: 'title',
+      project: 'project.title',
+      media: 'project.mainImage',
+      },
+      prepare(selection) {
+        const { title, project } = selection;
+        const combinedTitle = `${project} | ${title}`;
+        return {
+          title: combinedTitle,
+          media: selection.media,
+        };
+      },
     },
-  },
 })
