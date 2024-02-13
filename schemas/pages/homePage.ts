@@ -104,6 +104,16 @@ export default defineType({
           type: 'string',
         }),
         defineField({
+          name: 'subtitle',
+          title: 'Section Subtitle',
+          type: 'string',
+        }),
+        defineField({
+          name: 'intro',
+          title: 'Section Intro',
+          type: 'text',
+        }),
+        defineField({
           name: 'body',
           title: 'Section Body',
           type: 'blockContent',
@@ -119,6 +129,16 @@ export default defineType({
           name: 'title',
           title: 'Section Title',
           type: 'string',
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Section Subtitle',
+          type: 'string',
+        }),
+        defineField({
+          name: 'intro',
+          title: 'Section Intro',
+          type: 'text',
         }),
         defineField({
           name: 'body',
@@ -138,6 +158,16 @@ export default defineType({
           type: 'string',
         }),
         defineField({
+          name: 'subtitle',
+          title: 'Section Subtitle',
+          type: 'string',
+        }),
+        defineField({
+          name: 'intro',
+          title: 'Section Intro',
+          type: 'text',
+        }),
+        defineField({
           name: 'body',
           title: 'Section Body',
           type: 'blockContent',
@@ -153,6 +183,16 @@ export default defineType({
           name: 'title',
           title: 'Section Title',
           type: 'string',
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Section Subtitle',
+          type: 'string',
+        }),
+        defineField({
+          name: 'intro',
+          title: 'Section Intro',
+          type: 'text',
         }),
         defineField({
           name: 'body',
