@@ -9,7 +9,7 @@ import tag from './tag'
 import technology from './technology'
 import organization from './organizations'
 import homePage from './pages/homePage'
-import projectsPage from './pages/projectsPage'
+import landingPage from './pages/landingPage'
 
 export const schemaTypes = [
     blogPost,
@@ -23,5 +23,5 @@ export const schemaTypes = [
     tag,
     technology,
     homePage,
-    projectsPage,
+    landingPage,
 ]

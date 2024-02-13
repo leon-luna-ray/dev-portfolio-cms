@@ -11,6 +11,21 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'description',
+        maxLength: 96,
+        isUnique: () => true,
+      },
+    }),
+    defineField({
       name: 'seoImage',
       title: 'SEO Image',
       type: 'image',
@@ -93,7 +108,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'description',
       media: 'seoImage',
     },
   },

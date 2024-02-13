@@ -22,21 +22,13 @@ export default defineConfig({
               .title('Profile')
               .child(S.document().schemaType('profileDetails').documentId('profileDetails')),
             S.listItem()
-              .title('Landing Pages')
+              .title('Pages')
               .child(
                 S.list()
-                  .title('Landing Pages')
+                  .title('Pages')
                   .items([
-                    S.listItem()
-                      .title('Home')
-                      .child(
-                        S.document().schemaType('homePage').documentId('homePage').title('Home')
-                      ),
-                    S.listItem()
-                      .title('Projects')
-                      .child(
-                        S.document().schemaType('projectsPage').documentId('projectsPage').title('Projects')
-                      ),
+                    S.documentTypeListItem('homePage').title('Home Pages'),
+                    S.documentTypeListItem('landingPage').title('Landing Pages'),
                   ])
               ),
             ...S.documentTypeListItems().filter(item => !['globalSettings', 'profileDetails', 'homePage', 'projectsPage'].includes(item.getId())),
